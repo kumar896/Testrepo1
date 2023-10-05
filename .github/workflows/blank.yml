@@ -1,0 +1,14 @@
+name: Check Runner Label
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  check_runner_label:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display Runner Label
+        run: echo "Runner Label: ${{ runner.labels.RUNNER_LABEL }}"
